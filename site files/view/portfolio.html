@@ -1,0 +1,32 @@
+  <div class="jumbotron text-center">
+
+        <h1>Portfolio Page</h1>
+
+
+
+        <p>{{ message }}</p>
+        Search:
+        <br />
+        <input type="text" data-ng-model="name" />
+        <br />
+
+    </div>
+
+    <div class="row">
+
+        <div ng-repeat="websites in portfolio | filter:name " class="col-sm-4">
+
+            <div style="opacity:0.5;" ng-style="style" ng-mouseover="style={'opacity': '1', 'cursor':'pointer'}" ng-mouseleave="style={'opacity': '0.5'}" class="thumbnail">
+
+                <p class="title">  
+                    {{ websites.name }}
+                </p>
+                 <a href="{{websites.link}}"><img ng-src="{{ websites.cover }}"></a>
+
+            </div>
+
+
+
+  </div>
+
+</div>

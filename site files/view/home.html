@@ -1,0 +1,63 @@
+  <div class="jumbotron text-center">
+
+        <h1>Welcome</h1>
+
+
+
+        <p>{{ message }}</p>
+
+    </div>
+
+
+
+   <div class="home-intro" style="text-align:center;font-size:18px;" >
+
+  	<h2>Full Stack Web Developer</h2>
+
+   	<p>I’m a full stack web developer currently based in Armagh, N. Ireland.</p>
+
+   	<p>I work closely with small/medium sized businesses to help develop their online business strategy from web development to Internet marketing and have worked with agencies, tech start-ups and limited companies.</p>
+
+<p>Currently I am undertaking several projects for businesses based in Dublin, London and Madrid.  </p>
+
+   </div>
+
+
+
+    <div class="row" style="padding-bottom:5%;">
+
+
+
+        <div ng-repeat="websites in portfolio | filter:name " class="col-sm-4">
+
+
+
+            <div style="opacity:0.5; " ng-style="style" ng-mouseover="style={'opacity': '1', 'cursor':'pointer'}" ng-mouseleave="style={'opacity': '0.5'}" class="thumbnail">
+
+
+
+                <p class="title">  
+
+                    {{ websites.name }}
+
+                </p>
+
+                 <a href="{{websites.link}}"><img ng-src="{{ websites.cover }}"></a>
+
+
+
+            </div>
+
+  </div>
+
+<!--   <div class="home-contact" style="text-align:center;">
+
+  	<h3>Got a project in mind? Get in touch:</h3>
+
+  	<h2 class="home-email"><a href="mailto:martygribbin11@gmail.com">hello@martygribbin.com</a></h2>
+
+  </div>
+ -->
+
+
+</div>

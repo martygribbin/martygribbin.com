@@ -1,0 +1,52 @@
+<!-- index.html -->
+    <!DOCTYPE html>
+    <html ng-app="scotchApp">
+    <head>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+<!--       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" /> -->
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+
+      <!-- SPELLS -->
+      <!-- load angular and angular route via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+          <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+          <script src="//code.angularjs.org/1.2.20/angular-sanitize.min.js"></script>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <script src="js/script.js"></script>
+    </head>
+    <body ng-controller="mainController">
+
+
+        <!-- HEADER AND NAVBAR -->
+
+            <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li ng-repeat="menus in menu" class="sidebar-brand">
+                    <a href="{{menus.link}}"> {{ menus.name }} </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+           <div id="main">
+
+ <div ng-view></div>
+
+    </div>
+
+    </div>
+
+    </body>
+    </html>
